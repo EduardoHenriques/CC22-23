@@ -4,13 +4,18 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def filtroFicheiro(dir):
-	config = open(dir, 'r')
+from datetime import datetime
+
+
+def filtroFicheiro(dir, dirLOGs):
+	fileExample = open(dir, 'r')
+	fileLOG = open(dirLOGs, 'a')
+	now = datetime.now()
 	count = 0
 	stringsLidas, filter = [], []
 	while True:
 		count += 1
-		line = config.readline()
+		line = fileExample.readline()
 		if not line:
 			break
 		stringsLidas.append(line.strip())
@@ -19,10 +24,13 @@ def filtroFicheiro(dir):
 		s = stringsLidas[i].strip()
 		if not(s[:1] == "#" or s[:1] == ""):
 			print(s)
+			fileLOG.write('[{}]: Leu \'{}\' do ficheiro {}\n'.format(now.strftime('%Y/%m/%d|%H:%M:%S'), s, dir))
 			filter.append(s)
 
-	config.close()
+	fileExample.close()
+	fileLOG.close()
+	return
 
 
 if __name__ == '__main__':
-	filtroFicheiro('config.txt')
+	filtroFicheiro('example.txt', 'logs.txt')
