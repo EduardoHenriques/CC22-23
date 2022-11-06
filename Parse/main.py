@@ -12,6 +12,7 @@ def filtroFicheiro(dir, dirLOGs):
 	fileLOG = open(dirLOGs, 'a')
 	now = datetime.now()
 	count = 0
+	i = 0
 	stringsLidas, filter = [], []
 	while True:
 		count += 1
@@ -19,13 +20,12 @@ def filtroFicheiro(dir, dirLOGs):
 		if not line:
 			break
 		stringsLidas.append(line.strip())
-
-	for i in range(len(stringsLidas)):
 		s = stringsLidas[i].strip()
 		if not(s[:1] == "#" or s[:1] == ""):
 			print(s)
 			fileLOG.write('[{}]: Leu \'{}\' do ficheiro {}\n'.format(now.strftime('%Y/%m/%d|%H:%M:%S'), s, dir))
 			filter.append(s)
+		i += 1
 
 	fileExample.close()
 	fileLOG.close()
