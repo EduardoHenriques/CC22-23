@@ -24,5 +24,9 @@ class DNS:
 		self.header.__bin__()
 		self.data.__bin__()
 		return
+
+	def debug(self):
+		out = header.debug(self.header).__str__() + data.debug(self.data).__str__()
+		return out
 	
 

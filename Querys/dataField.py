@@ -32,4 +32,8 @@ class data:
 		self.respVals = [bin.encriptar(str) for str in self.respVals]
 		self.auhtorityVals = [bin.encriptar(str) for str in self.auhtorityVals]
 		self.extraVals = [bin.encriptar(str) for str in self.extraVals]
+
+	def debug(self):
+		out = self.queryInfo[0] + ',' + self.queryInfo[1] + ';'
+		return out
 		

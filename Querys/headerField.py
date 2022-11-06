@@ -1,6 +1,7 @@
 import random
 import bin
 
+
 # Criar um header novo(para o cliente enviar uma mensagem DNS ao servidor).
 # Para realizar o pedido, o servidor abre o  objeto da classe mensagem,
 # muda a flag de Q para A, realiza o pedido e
@@ -15,18 +16,19 @@ class header:
 		self.flags = 'Q'
 		if recursivo:
 			self.flags += '+R'
-		self.respCode = 0
-		self.nValores = 0
-		self.nAutoridades = 0
-		self.nExtraVal = 0
-	
+		self.respCode = '0'
+		self.nValores = '0'
+		self.nAutoridades = '0'
+		self.nExtraVal = '0'
+
 	def __str__(self):
 		out = '|HEADER|\nHeader-ID: ' + self.id.__str__() + '\nHeader-Flags: ' \
 			+ self.flags + '\nHeader-ResponseCode: ' + self.respCode.__str__() + '\nHeader-nValores: ' \
-			+ self.nValores.__str__() + '\nHeader.nAutoridades: ' + self.nAutoridades.__str__() + '\nHeader-nExtraVals: ' \
-			+ self.nExtraVal.__str__() + ''
+			+ self.nValores.__str__() + '\nHeader.nAutoridades: ' + self.nAutoridades.__str__() \
+			+ '\nHeader-nExtraVals: ' + self.nExtraVal.__str__() + ''
+
 		return out
-	
+
 	def __bin__(self):
 		self.id = bin.encriptar(self.id)
 		self.flags = bin.encriptar(self.flags)
@@ -34,3 +36,9 @@ class header:
 		self.nValores = bin.encriptar(self.nValores)
 		self.nAutoridades = bin.encriptar(self.nAutoridades)
 		self.nExtraVal = bin.encriptar(self.nExtraVal)
+
+	def debug(self):
+		out = self.id + ',' + self.flags + ',' + self.respCode + ',' + self.nValores + ',' + self.nAutoridades + ',' \
+			+ self.nExtraVal + ';'
+		return out
+
