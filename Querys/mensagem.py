@@ -1,4 +1,5 @@
 import bin
+import headerField
 from headerField import header
 from dataField import data
 
@@ -24,9 +25,34 @@ class DNS:
 		self.header.__bin__()
 		self.data.__bin__()
 		return
-
+	
+	# colocar uma mensagem DNS no modo debug para facilitar o seu envio
 	def debug(self):
-		out = header.debug(self.header).__str__() + data.debug(self.data).__str__()
+		resposta = False
+		if 'Q' not in self.header.flags:
+			resposta = True
+		out = ''
+		out = out + self.header.id.__str__() + ',' + self.header.flags + ',' + self.header.respCode \
+			+ ',' + self.header.nValores + ',' + self.header.nAutoridades + ',' + self.header.nExtraVal \
+			+ ';' + self.data.queryInfo[0] + ',' + self.data.queryInfo[1]
+		if resposta:
+			out += '\n'
+			out += debugAux(self.data.respVals)
+			out += debugAux(self.data.auhtorityVals)
+			out += debugAux(self.data.extraVals)
+		else:
+			out += ';\n'
 		return out
 	
-
+	
+# percorre uma lista de strings e coloca-as em modo debug com ',' e ';' nos locais apropriados
+def debugAux(listaDados):
+	out = ''
+	for i in range(len(listaDados)):
+		out += listaDados[i]
+		if i != len(listaDados)-1:
+			out += ',\n'
+		else:
+			out += ';\n'
+	return out
+	

@@ -4,15 +4,20 @@ import bin
 
 # Criar um header novo(para o cliente enviar uma mensagem DNS ao servidor).
 # Para realizar o pedido, o servidor abre o  objeto da classe mensagem,
-# muda a flag de Q para A, realiza o pedido e
+# muda a flag de Q, realiza o pedido e
 # coloca nos campos mensagem.dataField.(resp/auth/extra)Vals.
 # Antes de voltar a enviar a mensagem ao cliente, altera os campos do header
-# de acordo com o tamanho das listas de strings que colocou no mensagem.dataField.
+# de acordo com o respCode, o tamanho das listas de strings que colocou no mensagem.dataField.
+# e se é servidor primario ou nao(flag A)
 
 
 class header:
-	def __init__(self, recursivo=False):
-		self.id = (random.randint(0, 65535)).__str__()
+	def __init__(self, recursivo=False, resposta=False, autoritativo=False, id=-1):
+		if id == -1:
+			self.id = (random.randint(0, 65535)).__str__()
+		else:
+			self.id = id
+			
 		self.flags = 'Q'
 		if recursivo:
 			self.flags += '+R'
@@ -37,8 +42,6 @@ class header:
 		self.nAutoridades = bin.encriptar(self.nAutoridades)
 		self.nExtraVal = bin.encriptar(self.nExtraVal)
 
-	def debug(self):
-		out = self.id + ',' + self.flags + ',' + self.respCode + ',' + self.nValores + ',' + self.nAutoridades + ',' \
-			+ self.nExtraVal + ';'
-		return out
+	# metodo bytes funciona para uma string no modo debug
+
 
