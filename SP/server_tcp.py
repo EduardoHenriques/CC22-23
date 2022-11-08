@@ -1,4 +1,9 @@
 import socket
+import pickle
+import sys
+from SP import query
+sys.path.append('C:\\Users\\me\\Desktop\\CC22-23\\Querys')
+from mensagem import DNS
 import threading
 import time
 
@@ -7,20 +12,15 @@ def main():
 
     sp_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     FORMAT = 'utf-8'  # formato de codificaçao
-    IP = "127.0.0.3"  # ip do server ( tive de mudar o ip pq era desconhecido e o servidor nao corria
+    IP = socket.gethostname()  # ip do server ( tive de mudar o ip pq era desconhecido e o servidor nao corria
     IP2 = "127.0.0.4" #ip do ss
     PORTA = 53  # porta do server
     sp_server.bind((IP, PORTA))  # dar bind ao ip e porta ao servidor
     sp_server.listen(5)  # servidor fica à espera de ligaçoes
     print(f"Estou à escuta no {IP}:{53}")
     connection, address = sp_server.accept()  # servidor aceita a ligaçao
-
-
-
     while True:
-
         msg = connection.recv(1024)  # servidor recebe uma mensagem
-      # esta linha parece inutil  print(f"mensagem recebida de: {address}:{53}")
         if address[0] == IP2:  # caso a ligaçao feita seja com o SS  - Este ciclo esta a mandar 6x a msg para o ss
             print(f"Recebi uma ligação do SP {IP2}")
             file = open("bd_SP.txt", "r")  # abrir o ficheiro onde tem a BD
@@ -35,9 +35,11 @@ def main():
             break
         else:
             print(f"Recebi uma ligação do cliente {address}")
-            print(msg.decode('utf-8'))
-            msg = 'mensagem recebida no servidor'
-            connection.sendall(msg.encode('utf-8'))
+            file = open("bd_SP.txt", "r")
+            dns_query = pickle.loads(msg)
+            query.answer(dns_query, file)
+            print(dns_query)
+            connection.sendall(pickle.dumps(dns_query))
     sp_server.close()
 
 

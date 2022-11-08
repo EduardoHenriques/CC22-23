@@ -1,6 +1,6 @@
 import pickle
 import sys
-sys.path.append('/Querys')
+sys.path.append('C:\\Users\\me\\Desktop\\CC22-23\\Querys')
 from mensagem import DNS
 
 
