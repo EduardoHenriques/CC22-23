@@ -1,0 +1,4 @@
+[2022/11/07|22:10:02]: Leu 'SSADMIN mx1 exemplo.net 1000' do ficheiro example.txt
+[2022/11/07|22:10:02]: Leu 'SS mx3 exemplo.com 200' do ficheiro example.txt
+[2022/11/07|22:10:02]: Leu 'NX mk1 uminho.ru 69' do ficheiro example.txt
+[2022/11/07|22:10:02]: Leu 'MK topG 9anime.net 1020' do ficheiro example.txt
