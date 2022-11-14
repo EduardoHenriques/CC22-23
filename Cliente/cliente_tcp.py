@@ -1,20 +1,18 @@
 import socket
-import sys
-import time
-import cliente
-import pickle
-HEADER_LENGTH = 10
-IP = socket.gethostname()  # ip do server
+
+from ctt import CTT, Packet, PacketType
+
+IP = "127.0.0.3"  # ip do server
 PORTA = 53  # porta do server
 #my_name = input("name: ")
 #tipo_de_valor = input("tipo de valor: ")
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect((IP, PORTA))
-msg = cliente.querycliente()
-s.sendall(msg)
-print("msg enviada para servidor")
-print("à espera")
-msg = s.recv(1024)
-print((pickle.loads(msg)))
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+sock.connect((IP, PORTA))
+#s.setblocking(1)
 
-s.close()
+name = input("Name: ")
+type_of_value = input("Type of value: ")
+
+CTT.send_msg(Packet(PacketType.CLIENT_DISCONNECT, None), sock)
+
+sock.close()
