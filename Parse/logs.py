@@ -1,7 +1,9 @@
 from os.path import exists
 from datetime import datetime
-import logs
 from infoServer import infoServer
+import sys
+sys.path.append('C:\\Users\\Eduardo\\Desktop\\Querys')
+from mensagem import DNS
 
 
 def timestamp(ts):
@@ -90,9 +92,9 @@ def main():
     ex1 = infoServer('SPconfig.txt')
     bootLog(ex1, '50', 2000)
     print('write server')
-    writeLogLine(ex1, 'QR', '50', 'Querry exemplo')
-    writeLogLine(ex1, 'QE', '50', 'zeca é gay')
-    xd = input()
+    q1 = DNS('nomeEx', 'tipoEx', False)
+    writeLogLine(ex1, 'QR', '50', q1.debug())
+    writeLogLine(ex1, 'QE', '50', q1.debug())
     print('fechar server')
     endSessionLog(ex1, '50')
 

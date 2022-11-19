@@ -14,6 +14,7 @@ class infoServer:
 		self.DD = []
 		self.SS = []
 		self. SP = []
+		self.ST = []
 		# --
 		self.configDir = dirConfig
 		self.logDir = ''
@@ -30,8 +31,6 @@ class infoServer:
 					lines.append(line)
 			file.close()
 
-		temST = False
-
 		# analisar informaca das linhas do ficheiro e preencher os campos da classe
 		for line in lines:
 			if ' SP ' in line:
@@ -42,6 +41,12 @@ class infoServer:
 				self.DD.append((line.split(' DD ', 1)[1])[:-1])
 			elif 'root ST ' in line:
 				self.ST_DBDir = (line.split('root ST ', 1)[1])[:-1]
+				if exists(self.ST_DBDir):
+					servsTopo = open(self.ST_DBDir, 'r')
+					for linha in servsTopo.readlines():
+						if '#' not in line:
+							self.ST.append(linha[:-1])
+					servsTopo.close()
 			elif ' DB ' in line:
 				self.DBDir = (line.split('DB ', 1)[1])[:-1]
 			elif ' LG ' in line and 'all LG ' not in line:
@@ -57,6 +62,7 @@ if __name__ == '__main__':
 	ex1 = infoServer('SPconfig.txt')
 	print(ex1.DBDir)
 	print(ex1.ST_DBDir)
+	print(ex1.ST)
 	print(ex1.logDir)
 	print(ex1.logDir)
 	print(ex1.all_logDir)
