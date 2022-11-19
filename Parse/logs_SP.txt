@@ -1,0 +1,36 @@
+[2022:11:11|16:33:25]: ST 50 2000 shy
+[2022:11:11|16:33:25]: EV config-file-read SPconfig.txt
+[2022:11:11|16:33:25]: EV log-file-created all_logs.txt
+[2022:11:11|16:33:25]: EV database-file-read dataBase_SP.db
+[2022:11:11|16:33:25]: QR 50 Querry exemplo
+[2022:11:11|16:33:25]: QE 50 zeca é gay
+[2022:11:11|16:33:36]: SP 50 session-end
+[2022:11:12|11:46:24]: ST 50 2000 shy
+[2022:11:12|11:46:24]: EV config-file-read SPconfig.txt
+[2022:11:12|11:46:24]: EV database-file-read dataBase_SP.db
+[2022:11:12|11:46:44]: ST 50 2000 shy
+[2022:11:12|11:46:44]: EV config-file-read SPconfig.txt
+[2022:11:12|11:46:44]: EV database-file-read dataBase_SP.db
+[2022:11:12|11:47:25]: ST 50 2000 shy
+[2022:11:12|11:47:25]: EV config-file-read SPconfig.txt
+[2022:11:12|11:47:25]: EV database-file-read dataBase_SP.db
+[2022:11:12|11:47:25]: QR 50 8306,Q,0,0,0,0;nomeEx,tipoEx;
+[2022:11:12|11:47:29]: SP 50 session-end
+[2022:11:12|11:48:44]: ST 50 2000 shy
+[2022:11:12|11:48:44]: EV config-file-read SPconfig.txt
+[2022:11:12|11:48:44]: EV database-file-read dataBase_SP.db
+[2022:11:12|11:48:44]: QR 50 56920,Q,0,0,0,0;nomeEx,tipoEx;
+[2022:11:12|11:48:44]: QE 50 56920,Q,0,0,0,0;nomeEx,tipoEx;
+[2022:11:12|11:48:44]: SP 50 session-end
+[2022:11:19|15:43:31]: ST 50 2000 shy
+[2022:11:19|15:43:31]: EV config-file-read SPconfig.txt
+[2022:11:19|15:43:31]: EV database-file-read dataBase_SP.db
+[2022:11:19|15:43:31]: QR 50 43706,Q,0,0,0,0;nomeEx,tipoEx;
+[2022:11:19|15:43:31]: QE 50 43706,Q,0,0,0,0;nomeEx,tipoEx;
+[2022:11:19|15:43:31]: SP 50 session-end
+[2022:11:19|15:43:44]: ST 50 2000 shy
+[2022:11:19|15:43:44]: EV config-file-read SPconfig.txt
+[2022:11:19|15:43:44]: EV database-file-read dataBase_SP.db
+[2022:11:19|15:43:44]: QR 50 50499,Q,0,0,0,0;nomeEx,tipoEx;
+[2022:11:19|15:43:44]: QE 50 50499,Q,0,0,0,0;nomeEx,tipoEx;
+[2022:11:19|15:43:44]: SP 50 session-end

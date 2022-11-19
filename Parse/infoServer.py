@@ -6,6 +6,7 @@
 
 from datetime import datetime
 from os.path import exists
+from infoDB import BD
 
 
 class infoServer:
@@ -60,11 +61,14 @@ class infoServer:
 
 if __name__ == '__main__':
 	ex1 = infoServer('SPconfig.txt')
-	print(ex1.DBDir)
-	print(ex1.ST_DBDir)
-	print(ex1.ST)
-	print(ex1.logDir)
-	print(ex1.logDir)
-	print(ex1.all_logDir)
-	print(ex1.startTime)
+	BD_ex1 = BD(ex1.DBDir)
+	print(BD_ex1)
+
+	#print(ex1.DBDir)
+	#print(ex1.ST_DBDir)
+	#print(ex1.ST)
+	#print(ex1.logDir)
+	#print(ex1.logDir)
+	#print(ex1.all_logDir)
+	#print(ex1.startTime)
 
