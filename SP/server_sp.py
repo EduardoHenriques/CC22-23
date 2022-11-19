@@ -6,7 +6,7 @@ from enum import Enum
 
 IP = "127.0.0.3"  # ip do server ( tive de mudar o ip pq era desconhecido e o servidor nao corria
 IP2 = "127.0.0.4"  # ip do ss
-PORTA = 53  # porta do server
+PORTA = 1222  # porta do server
 
 
 def main():
@@ -20,7 +20,7 @@ def main():
         while True:
             # Esperar por uma conexão
             connection, address = sp_server.accept()
-            print(f"[SERVER] Conexão aceite. {address}")
+            print(f"[SERVER] Conexão aceite. {connection}")
 
             # Criar thread responsável por esta conexão
             worker = ServerWorker(connection, address)
@@ -35,5 +35,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-#
