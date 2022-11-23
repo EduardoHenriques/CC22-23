@@ -1,0 +1,46 @@
+[2022:11:19|16:46:34]: ST 1222 2000 shy
+[2022:11:19|16:46:34]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:19|16:46:34]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:19|16:46:53]: ST 1222 2000 shy
+[2022:11:19|16:46:53]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:19|16:46:53]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:19|17:02:23]: ST 1222 2000 shy
+[2022:11:19|17:02:23]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:19|17:02:23]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:19|17:04:51]: ST 1222 2000 shy
+[2022:11:19|17:04:51]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:19|17:04:51]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:19|17:06:55]: ST 1222 2000 shy
+[2022:11:19|17:06:55]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:19|17:06:55]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:19|17:08:01]: ST 1222 2000 shy
+[2022:11:19|17:08:01]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:19|17:08:01]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:19|17:11:00]: ST 1222 2000 shy
+[2022:11:19|17:11:00]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:19|17:11:00]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:19|17:11:07]: ZT 127.0.0.4 
+[2022:11:19|17:14:04]: ST 1222 2000 shy
+[2022:11:19|17:14:04]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:19|17:14:04]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:19|17:14:11]: ZT 127.0.0.4 
+[2022:11:19|17:14:16]: SP 1222 session-end
+[2022:11:19|17:21:00]: ST 1222 2000 shy
+[2022:11:19|17:21:00]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:19|17:21:00]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:19|17:22:11]: ZT 127.0.0.4 
+[2022:11:19|17:22:22]: SP 1222 session-end
+[2022:11:23|13:07:35]: ST 1222 2000 shy
+[2022:11:23|13:07:35]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:23|13:07:35]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:23|13:07:43]: QR 1222 6685,Q+R,0,0,0,0;example.com.,MX;
+
+[2022:11:23|15:10:09]: ST 1222 2000 shy
+[2022:11:23|15:10:09]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:23|15:10:09]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:23|15:10:57]: SP 1222 session-end
+[2022:11:23|15:10:57]: ST 1222 2000 shy
+[2022:11:23|15:10:57]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:23|15:10:57]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:23|15:12:11]: QR 1222 9049,Q+R,0,0,0,0;example.com.,MX;
+

@@ -6,7 +6,7 @@
 
 from datetime import datetime
 from os.path import exists
-from infoDB import BD
+from infoBD import BD
 
 
 class infoServer:

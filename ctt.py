@@ -12,11 +12,12 @@ class PacketType(Enum):
     # Pacotes enviados pelo servidor principal
     SERVER_RESPONSE         = 20
     GET_BD_RESPONSE         = 21
+    GET_BD_END              = 22
 
     # Pacotes enviados pelo servidor secundário
     GET_BD_REQUEST          = 30
     GET_BD_CONFIRM          = 31
-
+    GET_BD_CONFIRM_END      = 32
 
 class Packet:
     def __init__(self, type, data):
@@ -68,4 +69,9 @@ class CTT:
 
     @staticmethod
     def deserialize(msg_bytes):
-        return pickle.loads(msg_bytes)
+        try:
+            data = pickle.loads(msg_bytes)
+        except EOFError:
+            data = 'null'  # or whatever you want
+
+        return data

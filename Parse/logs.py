@@ -2,7 +2,7 @@ from os.path import exists
 from datetime import datetime
 from infoServer import infoServer
 import sys
-sys.path.append('C:\\Users\\Eduardo\\Desktop\\Querys')
+sys.path.append('/home/me/CC22-23/Querys')
 from mensagem import DNS
 
 

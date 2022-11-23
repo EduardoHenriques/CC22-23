@@ -1,0 +1,12 @@
+[2022:11:19|17:22:08]: ST 2000 2000 shy
+[2022:11:19|17:22:08]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:19|17:22:08]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:19|17:22:11]: SP 2000 session-end
+[2022:11:23|15:10:25]: ST 2000 2000 shy
+[2022:11:23|15:10:25]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:23|15:10:25]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:23|15:10:25]: SP 2000 session-end
+[2022:11:23|15:14:28]: ST 2000 2000 shy
+[2022:11:23|15:14:28]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:23|15:14:28]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:11:23|15:14:29]: SP 2000 session-end

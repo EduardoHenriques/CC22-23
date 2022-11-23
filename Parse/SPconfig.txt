@@ -1,5 +1,5 @@
 # Configuration file for primary server for example.com
-example.com DB dataBase_SP.db
+example.com DB /home/me/CC22-23/SP/bd_SP.txt
 example.com SS 193.123.5.189
 example.com SS 193.123.5.190:5353
 example.com DD 127.0.0.1

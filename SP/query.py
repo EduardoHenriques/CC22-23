@@ -1,6 +1,5 @@
 import sys
-
-sys.path.append('C:\\Users\\me\\Desktop\\CC22-23\\Querys')
+sys.path.append('/home/me/CC22-23/Querys')
 from mensagem import DNS
 
 
@@ -27,24 +26,22 @@ def verifica_extras(valor_res, valor_aut, linha):
     return False
 
 
-def answer(DNS_query, file):
-    nome = DNS_query.data.queryInfo[0]
-    tipo = DNS_query.data.queryInfo[1]
-    flags = DNS_query.header.flags
-    valor_res = []
-    valor_aut = []
-    valor_ext = []
-    linhas = file.readlines()
-    nome = get_default(nome, linhas)
-    print(nome)
-    for linha in linhas:
-        fstelem = linha.split(' ')[0]
-        if nome == fstelem and tipo in linha:
-            valor_res.append(linha[:-1])
-        if nome == fstelem and 'NS' in linha:
-            valor_aut.append(linha[:-1])
-        if 'A' in linha:
-            if verifica_extras(valor_res, valor_aut, linha):
+def answer(DNS_query, bd):
+    nome = DNS_query.data.queryInfo[0]#campo nome do header DNS
+    tipo = DNS_query.data.queryInfo[1]#campo tipo do header DNS
+    flags = DNS_query.header.flags#campo flags do header DNS
+    valor_res = []#campo valor de resposta do header DNS
+    valor_aut = []#campo valores autoritaticos do header DNS
+    valor_ext = []#campo valores extra do header DNS
+    nome = get_default(nome, bd)#funçao que associa um carater ao valor de DEFAULT na base de dados
+    for linha in bd:
+        fstelem = linha.split(' ')[0]#1ª palavra de em cada linha da BD
+        if nome == fstelem and tipo in linha:#verificar se a linha contem o nome e o tipo da query recebida
+            valor_res.append(linha[:-1])#se sim adiciona a linha ao campo de valores de reposta
+        if nome == fstelem and 'NS' in linha:#verifica se a linha contem valores autoritativos
+            valor_aut.append(linha[:-1])#se sim adiciona a linha ao campo de valores autoritativos
+        if 'A' in linha:#verificar se linhas correspondem a campos extra
+            if verifica_extras(valor_res, valor_aut, linha):#verifica se algum dos campos pedidos na query estao nes
                 valor_ext.append(linha[:-1])
     DNS_query.data.respVals = valor_res
     DNS_query.data.auhtorityVals = valor_aut
@@ -61,4 +58,5 @@ def answer(DNS_query, file):
             flags += '+A'
         else:
             flags = 'A'
-    DNS_query.header.flags= flags
+    DNS_query.header.flags = flags
+    return DNS_query
