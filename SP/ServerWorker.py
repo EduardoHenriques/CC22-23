@@ -1,4 +1,5 @@
 import socket
+import time
 from threading import Thread
 import query
 from ctt import CTT, Packet, PacketType
@@ -37,18 +38,17 @@ class ServerWorker(Thread):
                         file = open("bd_SP.txt", "r")  # abrir o ficheiro onde tem a BD
                         num = 1#variavél para indicar as linhas que foram enviadas e recebidas
                         # enviar para o SS uma mensagem a confirmar inicio da transmissao da bd
-                        for linha in copia_bd.linhas:
-                            CTT.send_msg(Packet(PacketType.GET_BD_RESPONSE, linha), self.socket)  # enviar uma linha da BD
-                            notificacao = CTT.recv_msg(self.socket)  # ver se o ss recebe os dados
-                            if notificacao.type != PacketType.GET_BD_CONFIRM:#caso o ss nao receba os dados
-                                print("[SERVER WORKER] Erro na transmissão da BD linha: " + num.__str__())
-                            num += 1
-                        CTT.send_msg(Packet(PacketType.GET_BD_END, None), self.socket)  # confirmar o fim do envio da BD
-                        notificacao = CTT.recv_msg(self.socket)  # verificar se o SS recebeu a copia corretamente
-                        if notificacao.type == PacketType.GET_BD_CONFIRM_END:#confirmaçao que o ss recebeu a copia corretamente
-                            print("[SERVER WORKER] Transmissão concluida")
-                            writeLogLine(self.servidor, 'ZT', IP2, '')#escrever no ficheiro de log que houve uma transferencia de zona
-
+                        numLinhas = copia_bd.numLinhas
+                        CTT.send_msg(Packet(PacketType.NUM_LINHAS_BD, numLinhas),self.socket)
+                        notificacao = CTT.recv_msg(self.socket)
+                        if notificacao.type == PacketType.CONFIRM_NUM:
+                            for linha in copia_bd.linhas:
+                                dados = (linha,num)
+                                CTT.send_msg(Packet(PacketType.BD_RESPONSE_LINE, dados),
+                                             self.socket)  # enviar uma linha da BD
+                                num += 1
+                            print(copia_bd)
+                            writeLogLine(self.servidor, 'ZT', IP2,'')  # escrever no ficheiro de log que houve uma transferencia de zona
                     # Caso o cliente se queira desconectar
                     elif packet.type == PacketType.CLIENT_DISCONNECT:
                         print("[SERVER WORKER] Ligação acabou")
@@ -57,9 +57,11 @@ class ServerWorker(Thread):
                     # Caso o cliente envie uma mensagem
                     elif packet.type == PacketType.CLIENT_MESSAGE:
                         print(f"[SERVER WORKER] Recebi uma ligação do cliente {self.address}")
-                        writeLogLine(self.servidor, 'QR', PORTA.__str__(), packet.data.debug() )#escrever no ficheiro de log que houve uma resposta a uma querie
+                        writeLogLine(self.servidor, 'QR', PORTA.__str__(), packet.data.debugLog() )#escrever no ficheiro de log que recebeu uma querie
                         value = query.answer(packet.data, copia_bd.linhas)#processar a query recebida
                         CTT.send_msg(Packet(PacketType.SERVER_RESPONSE, value), self.socket)#enviar resposta a query para o cliente
+                        print(packet.data.debug())
+                        writeLogLine(self.servidor, 'QE', PORTA.__str__(),packet.data.debugLog())  # escrever no ficheiro de log que houve uma resposta a uma querie
 
         except KeyboardInterrupt:
             self.socket.close()

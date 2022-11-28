@@ -11,13 +11,13 @@ class PacketType(Enum):
 
     # Pacotes enviados pelo servidor principal
     SERVER_RESPONSE         = 20
-    GET_BD_RESPONSE         = 21
-    GET_BD_END              = 22
+    NUM_LINHAS_BD           = 22
+    BD_RESPONSE_LINE        = 24
 
     # Pacotes enviados pelo servidor secundário
     GET_BD_REQUEST          = 30
-    GET_BD_CONFIRM          = 31
-    GET_BD_CONFIRM_END      = 32
+    CONFIRM_LINHA          = 31
+    CONFIRM_NUM             = 34
 
 class Packet:
     def __init__(self, type, data):

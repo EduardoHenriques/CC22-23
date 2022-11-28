@@ -11,6 +11,7 @@ class BD:
                 if '#' not in line or line == '\n':
                     self.linhas.append(line[:-1])
             file.close()
+        self.numLinhas = len(self.linhas)
 
     def __str__(self):
         out = ''

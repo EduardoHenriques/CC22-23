@@ -4,7 +4,7 @@ from mensagem import DNS
 
 
 def querycliente():
-    queryCL = "1123 example.com. MX R"
+    queryCL = "1123 meow.com MX R"
     parsed = queryCL.split(" ")
     recursivo = True
     if len(parsed) < 4:
