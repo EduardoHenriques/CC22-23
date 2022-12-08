@@ -22,6 +22,7 @@ def checkAllLogsFile(info):
 
 def bootLog(info, IP_porta, timeout):
     prevAllLogs = True
+    print(info.all_logDir)
     if not exists(info.all_logDir):
         prevAllLogs = False
 
@@ -34,6 +35,7 @@ def bootLog(info, IP_porta, timeout):
     # nos logs do servidor
 
     fLogs = open(info.logDir, 'a')
+    print(prevAllLogs)
 
     # comeca o servidor
     fLogs.write(timestamp(info.startTime) + 'ST ' + IP_porta.__str__() + ' ' + timeout.__str__() + ' shy\n')
