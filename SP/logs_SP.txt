@@ -317,3 +317,80 @@ mx2 A 193.136.130.201 TT;
 [2022:11:28|15:09:37]: QE 1222 29847,R+A,0,2,3,3;meow.com,MX;
 [2022:11:28|15:10:00]: ZT 127.0.0.4 
 [2022:11:28|15:10:03]: SP 1222 session-end
+[2022:11:28|16:51:25]: ST 1222 2000 shy
+[2022:11:28|16:51:25]: EV config-file-read /home/me/CC22-23/Parse/SPconfig.txt
+[2022:11:28|16:51:25]: EV database-file-read /home/me/CC22-23/SP/bd_SP.txt
+[2022:12:11|16:45:24]: ST 1222 2000 shy
+[2022:12:11|16:45:24]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|16:45:24]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|16:45:24]: ST 1223 2000 shy
+[2022:12:11|16:45:24]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|16:45:24]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|16:45:49]: QR 1222 41433,Q,0,0,0,0;meow.com,MX;
+[2022:12:11|16:45:49]: QE 1222 41433,A,0,2,3,5;meow.com,MX;
+[2022:12:11|16:46:23]: ST 2000 2000 shy
+[2022:12:11|16:46:23]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|16:46:23]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|16:46:23]: ZT 127.0.0.4 
+[2022:12:11|16:52:58]: ST 1222 2000 shy
+[2022:12:11|16:52:58]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|16:52:58]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|16:52:58]: ST 1223 2000 shy
+[2022:12:11|16:52:58]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|16:52:58]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|16:53:02]: ST 2000 2000 shy
+[2022:12:11|16:53:02]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|16:53:02]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|16:53:02]: ZT 127.0.0.4 
+[2022:12:11|16:54:11]: ST 1222 2000 shy
+[2022:12:11|16:54:11]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|16:54:11]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|16:54:11]: ST 1223 2000 shy
+[2022:12:11|16:54:11]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|16:54:11]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|16:54:14]: ST 2000 2000 shy
+[2022:12:11|16:54:14]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|16:54:14]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|16:54:54]: ST 1222 2000 shy
+[2022:12:11|16:54:54]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|16:54:54]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|16:54:54]: ST 1223 2000 shy
+[2022:12:11|16:54:54]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|16:54:54]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|16:54:55]: SP 1222 session-end
+[2022:12:11|17:26:03]: ST 1222 2000 shy
+[2022:12:11|17:26:03]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|17:26:03]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|17:26:03]: ST 1223 2000 shy
+[2022:12:11|17:26:03]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|17:26:03]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|17:30:56]: ST 2000 2000 shy
+[2022:12:11|17:30:56]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|17:30:56]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|17:31:05]: SP 1222 session-end
+[2022:12:11|17:31:05]: SP 1223 session-end
+[2022:12:11|17:31:07]: SP 2000 session-end
+[2022:12:11|17:31:10]: ST 1222 2000 shy
+[2022:12:11|17:31:10]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|17:31:10]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|17:31:10]: ST 1223 2000 shy
+[2022:12:11|17:31:10]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|17:31:10]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|17:31:11]: ST 2000 2000 shy
+[2022:12:11|17:31:11]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|17:31:11]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|18:07:18]: SP 2000 session-end
+[2022:12:11|18:07:20]: ST 2000 2000 shy
+[2022:12:11|18:07:20]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|18:07:20]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|18:07:20]: ZT 127.0.0.4 
+[2022:12:11|18:10:45]: SP 1222 session-end
+[2022:12:11|18:10:45]: SP 1223 session-end
+[2022:12:11|18:58:18]: ST 1222 2000 shy
+[2022:12:11|18:58:18]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|18:58:18]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|18:58:18]: ST 1223 2000 shy
+[2022:12:11|18:58:18]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:11|18:58:18]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:11|18:58:21]: SP 1222 session-end
+[2022:12:11|18:58:21]: SP 1223 session-end

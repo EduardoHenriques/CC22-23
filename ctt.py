@@ -41,11 +41,15 @@ class CTT:
         sock.sendall(msg_bytes)
 
     @staticmethod
+    def send_msg_udp(msg, sock, serverAddressPort):
+        msg_bytes = CTT.serialize(msg)
+        sock.sendto(msg_bytes, serverAddressPort)
+
+
+    @staticmethod
     def recv_msg(sock):
         header = sock.recv(CTT.HEADER_SIZE)
-
         msg_len = int.from_bytes(header, 'big')
-
         recv_bytes = 0
         msg_bytes = b''
         while recv_bytes < msg_len:
@@ -56,12 +60,16 @@ class CTT:
             else:
                 buffer = sock.recv(CTT.BUFFER_SIZE)
                 recv_bytes += CTT.BUFFER_SIZE
-
             msg_bytes += buffer
-
         msg = CTT.deserialize(msg_bytes)
-
         return msg
+
+    @staticmethod
+    def recv_msg_udp(sock):
+        bufferSize = 1024
+        msg_bytes, adress = sock.recvfrom(bufferSize)
+        msg = CTT.deserialize(msg_bytes)
+        return (msg, adress)
 
     @staticmethod
     def serialize(msg):
