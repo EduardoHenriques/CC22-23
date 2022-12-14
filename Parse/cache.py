@@ -26,10 +26,10 @@ def expirou(linha):
 	timestamp_linha = float(linha[PARA_TIMESTAMP])
 	currTime = datetime_to_seconds(datetime.now())
 	
-	if float(currTime) - timestamp_linha > ttl_linha/1000:
+	if float(currTime) - timestamp_linha > ttl_linha / 1000:
 		return True
 	return False
-	
+
 
 def str_to_CacheEntry(str):
 	linhaCache = ["...", "...", "...", "...", "...", "...", "...", "...", "..."]
@@ -53,7 +53,7 @@ def str_to_CacheEntry(str):
 
 
 class cache:
-	# encher a cache com valores vazios e com o timestamp correto
+	# encher a cache com valores va dcv zios e com o timestamp correto
 	def __init__(self):
 		
 		self.cache = [[]]
@@ -65,7 +65,7 @@ class cache:
 			self.cache[i][PARA_TIMESTAMP] = datetime_to_seconds(datetime.now())
 	
 	def showCache(self):
-		print('\n'.join(['\t'.join(['{0: >8}'.format(str(cell)) for cell in row]) for row in self.cache]))
+		print('\n'.join(['\t'.join(['{:^12}'.format(str(cell)) for cell in row]) for row in self.cache]))
 	
 	# apenas para SERVIDORES SECUNDARIOS...
 	def atualizarCache(self, domain):
@@ -85,62 +85,60 @@ class cache:
 			elif linha[PARA_TIPO] == tipo and linha[PARA_NOME] == nome:
 				linhasMatched.append(linha)
 		return linhasMatched
-		
+	
 	# verifica se existe uma linha igual á que vamos procurar, return true se nao foi preciso inserir a linha
 	def existe(self, linha):
-		for i in range(CACHE_LINHAS):    # verifica se uma linha da cache como esta ja existe
+		for i in range(CACHE_LINHAS):  # verifica se uma linha da cache como esta ja existe
 			l = self.cache[i]
 			if linha[PARA_NOME] == l[PARA_NOME] and linha[PARA_VALOR] == l[PARA_VALOR] and \
-				linha[PARA_TIPO] == l[PARA_TIPO] and linha[PARA_TTL] == l[PARA_TTL] and linha[PARA_PRI] == l[PARA_PRI]:
+					linha[PARA_TIPO] == l[PARA_TIPO] and linha[PARA_TTL] == l[PARA_TTL] and linha[PARA_PRI] == l[
+				PARA_PRI]:
 				if l[PARA_ORIGEM] != "OTHER":
 					print("pedido ignorado, ja existe uma linha igual a esta do SP/File")
-					return True     # pedido ignorado porque a linha tem origem FILE ou SP
-				elif self.cache[i][PARA_STATUS] == "VALID" :
-					l[PARA_TIMESTAMP] = datetime_to_seconds(datetime.now())  # linha OTHER já existe, timestamp levou refresh
-					print("linha nao  foi adicionada, linha " + (i+1).__str__() + "levou refresh")
+					return True  # pedido ignorado porque a linha tem origem FILE ou SP
+				elif self.cache[i][PARA_STATUS] == "VALID":
+					l[PARA_TIMESTAMP] = datetime_to_seconds(
+						datetime.now())  # linha OTHER já existe, timestamp levou refresh
+					print("linha nao  foi adicionada, linha " + (i + 1).__str__() + "levou refresh")
 					return True
 		print("nao existe uma linha(válida) como esta na cache...")
-		return False    # nao existe uma linha como esta na cache
-		
-		# recebe uma linha [nome,tipo,valor,ttl,prioridade, (origem), (timestamp), VALID]
+		return False  # nao existe uma linha como esta na cache
+	
+	# recebe uma linha [nome,tipo,valor,ttl,prioridade, (origem), (timestamp), VALID]
 	def inserirCache(self, linha):
 		if linha[PARA_ORIGEM] != "OTHER":
 			self.permaInsert(linha)
 			print("linha permanente(SP/File)inserida")
 			return
-		elif not self.existe(linha): # nao existe uma linha como esta na cache e tem origem OTHER
-			for i,l in reversed(list(enumerate(self.cache))):
+		elif not self.existe(linha):  # nao existe uma linha como esta na cache e tem origem OTHER
+			for i, l in reversed(list(enumerate(self.cache))):
 				print(i)
 				if l[PARA_STATUS] == "FREE":
 					self.cache[i] = linha
 					print("linha temporaria(OTHER) adicionada")
 					break
-
 	
 	# insersao com prioridade, insere na primeira linha da cache que esta livre(FILE/SP)
-	def permaInsert(self,linha):
+	def permaInsert(self, linha):
 		for i in range(CACHE_LINHAS):
 			if self.cache[i][PARA_STATUS] == "FREE":
 				self.cache[i] = linha
 				self.cache[i][PARA_TIMESTAMP] = datetime_to_seconds(datetime.now())
 				return
 		return
-	
 
-		
-		
+
 if __name__ == '__main__':
 	cache1 = cache()
 	linha_teste = ["example.com", "A", "125.192.02.31", "2450", "0", "OTHER",
-						datetime_to_seconds(datetime.now()), "VALID"]
+	               datetime_to_seconds(datetime.now()), "VALID"]
 	cache1.cache[3] = linha_teste
-
+	
 	sleep(3)
 	linha_teste2 = ["example.com", "A", "125.192.02.31", "2450", "0", "OTHER",
-				   datetime_to_seconds(datetime.now()), "VALID"]
+	                datetime_to_seconds(datetime.now()), "VALID"]
 	cache1.cache[5] = linha_teste2
-
-
+	
 	cache1.showCache()
 	res = cache1.matchCache("A", "example.com")
 	cache1.showCache()
@@ -149,17 +147,14 @@ if __name__ == '__main__':
 	# 				datetime_to_seconds(datetime.now()), "VALID"]
 	#
 	linha_teste4 = ["example.com", "A", "125.192.02.31", "2450", "0", "OTHER",
-					datetime_to_seconds(datetime.now()), "VALID"]
-
+	                datetime_to_seconds(datetime.now()), "VALID"]
+	
 	# cache1.inserirCache(linha_teste3)
-
+	
 	cache1.showCache()
 	print("\nINSERSAOLinhateste4\n")
-
+	
 	sleep(3)
-
+	
 	cache1.inserirCache(linha_teste4)
 	cache1.showCache()
-	
-	
-	
