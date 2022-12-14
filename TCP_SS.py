@@ -29,7 +29,7 @@ class TCPListen(Thread):
             counter = 0
             while t and counter != 3:
                 counter = counter + 1
-                t = not transf_zona(ss_server, self.BD, self.ip, self.porta)
+                t = not transf_zona(ss_server, self.ip, self.porta, self.servidor)
                 if t:
                     print(f"[SERVER SS] Tentar outra vez...")
                     time.sleep(3)

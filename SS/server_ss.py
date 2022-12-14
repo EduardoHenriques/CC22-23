@@ -20,9 +20,8 @@ PORTA = 2000  # porta do server
 PORTA_UDP = 2001
 BD = []
 BUFFER_SIZE = 1024
-servidor = infoServer(
-    '/home/me/CC22-23/SP/caoSP_config.txt')  # lẽ o ficheiro de configuraçao e cria uma classe com a informaçao do mesmo
-
+servidor = infoServer('/home/me/CC22-23/SS/caoSS1_config.txt')  # lẽ o ficheiro de configuraçao e cria uma classe com a informaçao do mesmo
+servidor.showInfo()
 def main():
     try:
         ThreadUDP = UDPlisten(PORTA_UDP, IP2, servidor)

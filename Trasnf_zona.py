@@ -1,8 +1,10 @@
 import socket
+
+from Parse.infoBD import linhaBD_to_linhaCache
 from ctt import CTT, Packet, PacketType
 
 
-def transf_zona(ss_server, BD, IP2, PORTA):
+def transf_zona(ss_server, IP2, PORTA, info):
     # Enviar o pedido para receber uma cópia da BD do SP
     CTT.send_msg(Packet(PacketType.GET_BD_REQUEST, None), ss_server)
     # Enviar confirmação para o SP
@@ -28,12 +30,10 @@ def transf_zona(ss_server, BD, IP2, PORTA):
                 print(f"[SERVER SS] Erro na transmissão de zona")
                 return False
             i = i + 1
-            if i == num:
-                print(f"[SERVER SS] Fim da transmissão de zona")
-                BD.append(packet.data)
-                for linha in BD:
-                    print(linha)
-                return True
             if packet.type == PacketType.BD_RESPONSE_LINE:
-                BD.append(packet.data)
-
+                print(packet.data)
+                info.BD_e_Cache.cache.inserirCache(linhaBD_to_linhaCache(packet.data[0],"SP"))
+                info.showInfo()
+                if i == num:
+                    print(f"[SERVER SS] Fim da transmissão de zona")
+                    return True

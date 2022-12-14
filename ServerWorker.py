@@ -39,7 +39,7 @@ class ServerWorker(Thread):
                             print(f"[SERVER WORKER] Recebi uma ligação do SS {IP2}")
                             num = 1#variavél para indicar as linhas que foram enviadas e recebidas
                             # enviar para o SS uma mensagem a confirmar inicio da transmissao da bd
-                            numLinhas = copia_bd.numLinhas
+                            numLinhas = len(copia_bd.linhas)
                             CTT.send_msg(Packet(PacketType.NUM_LINHAS_BD, numLinhas),self.socket)
                             notificacao = CTT.recv_msg(self.socket)
                             if notificacao.type == PacketType.CONFIRM_NUM:
