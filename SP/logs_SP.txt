@@ -394,3 +394,37 @@ mx2 A 193.136.130.201 TT;
 [2022:12:11|18:58:18]: EV database-file-read /home/me/CC22-23/bd_SP.txt
 [2022:12:11|18:58:21]: SP 1222 session-end
 [2022:12:11|18:58:21]: SP 1223 session-end
+[2022:12:14|14:51:37]: ST 1222 2000 shy
+[2022:12:14|14:51:37]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:14|14:51:37]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:14|14:51:37]: ST 1223 2000 shy
+[2022:12:14|14:51:37]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:14|14:51:37]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:14|14:51:41]: ZT 127.0.0.4 
+[2022:12:14|14:52:16]: SP 1222 session-end
+[2022:12:14|14:52:16]: SP 1223 session-end
+[2022:12:14|14:52:17]: ST 1222 2000 shy
+[2022:12:14|14:52:17]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:14|14:52:17]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:14|14:52:17]: ST 1223 2000 shy
+[2022:12:14|14:52:17]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:14|14:52:17]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:14|14:52:20]: ZT 127.0.0.4 
+[2022:12:14|14:54:15]: SP 1222 session-end
+[2022:12:14|14:54:15]: SP 1223 session-end
+[2022:12:14|14:54:17]: ST 1222 2000 shy
+[2022:12:14|14:54:17]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:14|14:54:17]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:14|14:54:17]: ST 1223 2000 shy
+[2022:12:14|14:54:17]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:14|14:54:17]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:14|14:54:20]: ZT 127.0.0.4 
+[2022:12:14|14:55:57]: SP 1222 session-end
+[2022:12:14|14:55:57]: SP 1223 session-end
+[2022:12:14|14:55:58]: ST 1222 2000 shy
+[2022:12:14|14:55:58]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:14|14:55:58]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:14|14:55:58]: ST 1223 2000 shy
+[2022:12:14|14:55:58]: EV config-file-read /home/me/CC22-23/SP/caoSP_config.txt
+[2022:12:14|14:55:58]: EV database-file-read /home/me/CC22-23/bd_SP.txt
+[2022:12:14|14:56:00]: ZT 127.0.0.4 

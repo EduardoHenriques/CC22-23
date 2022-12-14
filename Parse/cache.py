@@ -122,6 +122,7 @@ class cache:
 	def permaInsert(self, linha):
 		for i in range(CACHE_LINHAS):
 			if self.cache[i][PARA_STATUS] == "FREE":
+				print(i)
 				self.cache[i] = linha
 				self.cache[i][PARA_TIMESTAMP] = datetime_to_seconds(datetime.now())
 				return

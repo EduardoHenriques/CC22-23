@@ -16,7 +16,7 @@ def replaceDefault(line, def1, def2):
 
 
 # funcao que recebe uma linha da base de dados e retorna uma lista com 8 elementos(linha da cache) para inserir na cache
-def linhaBD_to_linhaCache(linhaBD, origem, TTLDefault):
+def linhaBD_to_linhaCache(linhaBD, origem):
     linhaCache = linhaBD.split(" ")
     size = len(linhaCache)
     if size == 4:

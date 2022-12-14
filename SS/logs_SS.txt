@@ -280,3 +280,14 @@
 [2022:12:11|16:46:23]: EV config-file-read /home/me/CC22-23/SS/caoSS1_config.txt
 [2022:12:11|16:53:02]: ST 127.0.0.4 2000 shy
 [2022:12:11|16:53:02]: EV config-file-read /home/me/CC22-23/SS/caoSS1_config.txt
+[2022:12:14|14:51:41]: ST 2000 2000 shy
+[2022:12:14|14:51:41]: EV config-file-read /home/me/CC22-23/SS/caoSS1_config.txt
+[2022:12:14|14:52:14]: SP 2000 session-end
+[2022:12:14|14:52:20]: ST 2000 2000 shy
+[2022:12:14|14:52:20]: EV config-file-read /home/me/CC22-23/SS/caoSS1_config.txt
+[2022:12:14|14:54:19]: SP 2000 session-end
+[2022:12:14|14:54:20]: ST 2000 2000 shy
+[2022:12:14|14:54:20]: EV config-file-read /home/me/CC22-23/SS/caoSS1_config.txt
+[2022:12:14|14:55:55]: SP 2000 session-end
+[2022:12:14|14:56:00]: ST 2000 2000 shy
+[2022:12:14|14:56:00]: EV config-file-read /home/me/CC22-23/SS/caoSS1_config.txt
