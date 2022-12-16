@@ -7,16 +7,17 @@ import infoBD
 from datetime import datetime
 from os.path import exists
 from infoBD import BD
+from infoBD import linhaBD_to_linhaCache
 
 
 class infoServer:
 	def __init__(self, dirConfig):
-		# --
+		# --valores
 		self.DD = []
 		self.SS = []
 		self.SP = []
 		self.ST = []
-		# --
+		# --diretorias
 		self.configDir = dirConfig
 		self.logDir = ''
 		self.all_logDir = ''
@@ -54,10 +55,13 @@ class infoServer:
 				self.logDir = (line.split('LG ', 1)[1])[:-1]
 			elif 'all LG ' in line:
 				self.all_logDir = (line.split('all LG ', 1)[1])[:-1]
-		
-		# quando o ficheiro de configuracao é lido, esta é a hora em que o servidor arrancou
+
+
+
+		# quando o ficheiro de configuracao é lido, esta é a hora em que o servidor arrancou...
 		self.startTime = datetime.now()
-		# e a base de dados é iniciada. Se existir diretoria, os dados sao lidos para a classe. A cache é sempre criada.
+		# ...e a base de dados é iniciada. Se existir diretoria, os dados sao lidos para a classe.
+		# A cache é sempre criada.
 		self.BD_e_Cache = BD(self.DBDir)
 	
 	def showInfo(self):
@@ -73,7 +77,13 @@ class infoServer:
 
 
 if __name__ == '__main__':
-	ex1 = infoServer('SPconfig.txt')
-	BD_ex1 = BD(ex1.DBDir)
-	ex1.BD_e_Cache = BD_ex1
-	ex1.showInfo()
+
+	# Exemplo de como cada servidor vai funcionar
+	ex1 = infoServer('SPconfig.txt') # informacao global de
+
+	ex1.BD_e_Cache.cache.showCache()   # EXEMPLO DE COLOCAR A BASE DE DADOS NA CACHE
+	for line in ex1.BD_e_Cache.linhas:   # EXEMPLO DE COLOCAR A BASE DE DADOS NA CACHE
+		cacheEntry = linhaBD_to_linhaCache(line,"FILE")   # EXEMPLO DE COLOCAR A BASE DE DADOS NA CACHE
+		ex1.BD_e_Cache.cache.inserirCache(cacheEntry)   # EXEMPLO DE COLOCAR A BASE DE DADOS NA CACHE
+	ex1.BD_e_Cache.cache.showCache()    # EXEMPLO DE COLOCAR A BASE DE DADOS NA CACHE
+
