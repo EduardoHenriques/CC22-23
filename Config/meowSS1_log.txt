@@ -1,0 +1,8 @@
+# Configuration file for Servidor de Dominio de Topo 1(SS-1) (10.4.4.3)
+meow. DD 10.3.3.2
+meow. SP 10.3.3.2
+meow. SS 10.1.1.1
+meow. LG /var/log/meowSS1_log.txt
+all LG /home/me/CC22-23/Logs/all_logs.txt
+root ST /var/dns/rootservers.db
+

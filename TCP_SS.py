@@ -6,10 +6,10 @@ from Trasnf_zona import transf_zona
 from ServerWorker import ServerWorker
 
 
-class TCPListen(Thread):
+class TCPListenSS(Thread):
 
     def __init__(self, porta, ip, ip_SP,servidor, BD):
-        self.porta = porta
+        self.porta = int(porta)
         self.ip = ip
         self.ip_SP = ip_SP
         self.type = "TCP"

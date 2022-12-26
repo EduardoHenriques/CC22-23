@@ -7,7 +7,7 @@ from ServerWorker import ServerWorker
 class UDPlisten(Thread):
 
     def __init__(self, porta, ip, servidor):
-        self.porta = porta
+        self.porta = int(porta)
         self.ip = ip
         self.type = "UDP"
         self.servidor = servidor

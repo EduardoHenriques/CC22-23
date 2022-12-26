@@ -1,0 +1,10 @@
+# Configuration file for Servidor de Dominio de Topo 2(SS-1) (10.2.2.4)
+# gato = 10.4.4.2
+# meow = 10.3.3.2
+gato.meow. DD 10.4.4.2
+gato.meow. DD 10.3.3.2
+gato.meow. SP 10.4.4.2
+gato.meow. LG /var/log/gatoSS1_log.txt
+all LG /home/me/CC22-23/Logs/all_logs.txt
+root ST /var/dns/rootservers.db
+

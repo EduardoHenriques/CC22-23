@@ -1,6 +1,6 @@
 import socket
 
-from Parse.infoBD import linhaBD_to_linhaCache
+from infoBD import linhaBD_to_linhaCache
 from ctt import CTT, Packet, PacketType
 
 
@@ -31,9 +31,8 @@ def transf_zona(ss_server, IP2, PORTA, info):
                 return False
             i = i + 1
             if packet.type == PacketType.BD_RESPONSE_LINE:
-                print(packet.data)
-                info.BD_e_Cache.cache.inserirCache(linhaBD_to_linhaCache(packet.data[0],"SP"))
-                info.showInfo()
+                info.BD_e_Cache.cache.inserirCache(linhaBD_to_linhaCache(packet.data[0], "SP"))
                 if i == num:
                     print(f"[SERVER SS] Fim da transmissão de zona")
+                    info.BD_e_Cache.cache.showCache()
                     return True

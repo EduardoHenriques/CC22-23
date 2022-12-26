@@ -4,10 +4,10 @@ from ctt import CTT
 from ServerWorker import ServerWorker
 
 
-class TCPListen(Thread):
+class TCPListenSP(Thread):
 
     def __init__(self, porta, ip, servidor):
-        self.porta = porta
+        self.porta = int(porta)
         self.ip = ip
         self.type = "TCP"
         self.servidor = servidor

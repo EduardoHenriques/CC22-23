@@ -56,7 +56,7 @@ class ServerWorker(Thread):
                     # Caso o cliente envie uma mensagem
                     print(f"[SERVER WORKER] Recebi uma ligação do cliente {self.address}")
                     writeLogLine(self.servidor, 'QR', PORTA.__str__(), msg.data.debugLog())  # escrever no ficheiro de log que recebeu uma querie
-                    value = query.answer(msg.data, copia_bd.linhas)  # processar a query recebida
+                    value = query.answer(msg.data, copia_bd.linhas, self.servidor, sck)  # processar a query recebida
                     CTT.send_msg_udp(Packet(PacketType.SERVER_RESPONSE, value), sck,self.address)  # enviar resposta a query para o cliente
                     print(msg.data.debug())
                     writeLogLine(self.servidor, 'QE', PORTA.__str__(),msg.data.debugLog())  # escrever no ficheiro de log que houve uma resposta a uma querie

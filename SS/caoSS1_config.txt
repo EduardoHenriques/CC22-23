@@ -1,9 +1,0 @@
-# Configuration file for Servidor de SubDominio 2 (SS-1) (10.3.3.3)
-# woof = 10.2.2.1
-# cao = 10.1.1.2
-cao.woof. DD 10.1.1.2
-cao.woof. DD 10.2.2.1
-cao.woof. SP 10.2.2.1
-cao.woof. LG /home/me/CC22-23/SS/logs_SS.txt
-all LG /home/me/CC22-23/SP/all_logs.txt
-root ST /var/dns/rootservers.db
