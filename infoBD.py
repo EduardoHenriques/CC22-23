@@ -46,6 +46,23 @@ class BD:
                         self.linhas.append(replaceDefault((line[:-1]), self.defaultDom, self.defaultTTL))
             file.close()
 
+    def query_to_cache(self, query, tipo_servidor):
+        print("query to cache")
+        print(query)
+        if tipo_servidor == "resolver":
+            origin = "OTHERS"
+        elif tipo_servidor == "ss":
+            origin = "SP"
+        else:
+            origin = "FILE"
+        for entryVal in query.data.respVals:
+            self.cache.inserirCache(linhaBD_to_linhaCache(entryVal, origin))
+        for entryAuth in query.data.auhtorityVals:
+            self.cache.inserirCache(linhaBD_to_linhaCache(entryAuth, origin))
+        for entryExtra in query.data.extraVals:
+            self.cache.inserirCache(linhaBD_to_linhaCache(entryExtra, origin))
+
+
     def __str__(self):
         str = ''
         for line in self.linhas:

@@ -4,13 +4,11 @@ from threading import Thread
 import query
 from ctt import CTT, Packet, PacketType
 import sys
-sys.path.append('/Querys')
-sys.path.append('/Parse')
 from mensagem import DNS
 from logs import endSessionLog, bootLog, writeLogLine
 from infoBD import BD
-IP = "127.0.0.3"  # ip do server ( tive de mudar o ip pq era desconhecido e o servidor nao corria
-IP2 = "127.0.0.4"  # ip do ss
+# IP = "127.0.0.3"
+# IP2 = "127.0.0.4"  # ip do ss
 PORTA = 1222  # porta do server
 
 
@@ -23,6 +21,13 @@ class ServerWorker(Thread):
         self.type = type
 
         Thread.__init__(self)
+
+
+    def tipo_servidor(self):
+        if self.servidor.SP:
+            return "ss"
+        else:
+            return "other"
 
     def run(self):
         try:
@@ -57,10 +62,14 @@ class ServerWorker(Thread):
                     print(f"[SERVER WORKER] Recebi uma ligação do cliente {self.address}")
                     writeLogLine(self.servidor, 'QR', PORTA.__str__(), msg.data.debugLog())  # escrever no ficheiro de log que recebeu uma querie
                     value = query.answer(msg.data, copia_bd.linhas, self.servidor, sck)  # processar a query recebida
+                    origem = self.tipo_servidor()
+                    self.servidor.BD_e_Cache.query_to_cache(value,origem)
+                    self.servidor.BD_e_Cache.cache.showCache()
                     CTT.send_msg_udp(Packet(PacketType.SERVER_RESPONSE, value), sck,self.address)  # enviar resposta a query para o cliente
                     print(msg.data.debug())
                     writeLogLine(self.servidor, 'QE', PORTA.__str__(),msg.data.debugLog())  # escrever no ficheiro de log que houve uma resposta a uma querie
                     break
-
+        # 10.3.3.1 2001 meow. MX
         except KeyboardInterrupt:
             self.socket.close()
+

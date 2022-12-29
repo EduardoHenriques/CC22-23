@@ -57,6 +57,10 @@ def answer(DNS_query, bd, dadosCache, socket):
                 # funçao que verifica se algum dos campos pedidos na query estao nesta BD
                 if verifica_extras(valor_res, valor_aut, linha, flags, socket):
                     valor_ext.append(linha[:-1])  # adicionar a linha ao cmapo de valores extra
+    if not valor_res:  # se nao houver valores de resposta entao o response code é alterado para corresponder o erro
+        DNS_query.header.respCode = "1"
+    else:  # se houver entao o response code é alterado para 0 confirmando uma query correta
+        DNS_query.header.respCode = "0"
     DNS_query.data.respVals = valor_res  # alterar o campo respVals do objeto DNS_query
     DNS_query.data.auhtorityVals = valor_aut  # alterar o campo auhtorityVals do objeto DNS_query
     DNS_query.data.extraVals = valor_ext  # alterar o campo extraVals do objeto DNS_query
