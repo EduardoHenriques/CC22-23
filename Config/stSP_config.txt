@@ -2,4 +2,4 @@
 root. DB /home/me/CC22-23/BD/ST.db
 root. SS 10.3.3.1:2000
 root. LG /home/me/CC22-23/Logs/stSP_logs.txt
-all LG /home/me/CC22-23/Logs/all_log.txt
+all LG /home/me/CC22-23/Logs/all_logs.txt
