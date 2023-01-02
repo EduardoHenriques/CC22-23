@@ -1,8 +1,8 @@
 #Ficheiro de Configuração do resolver
-woof. DD 10.2.2.1
-meow. DD 10.3.3.2:1223
-cao.woof. DD 10.1.1.2
-cato.meow. DD 10.4.4.2
-(RESOLVER) LG /var/log/resolver_log.txt
+woof. DD 10.2.2.1:2001
+meow. DD 10.3.3.2:2001
+cao.woof. DD 10.1.1.2:2001
+gato.meow. DD 10.4.4.2:2001
+(RESOLVER) LG /home/me/CC22-23/Logs/resolver_logs.txt
 all LG /home/me/CC22-23/Logs/all_logs.txt
-root ST /var/dns/rootservers.db
+root ST /home/me/CC22-23/BD/rootservers.db

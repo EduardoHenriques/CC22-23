@@ -3,8 +3,8 @@
 # meow = 10.3.3.2
 gato.meow. DD 10.4.4.2
 gato.meow. DD 10.3.3.2
-gato.meow. SP 10.4.4.2
-gato.meow. LG /var/log/gatoSS1_log.txt
+gato.meow. SP 10.4.4.2:2000
+gato.meow. LG /home/me/CC22-23/Logs/gatoSS1_logs.txt
 all LG /home/me/CC22-23/Logs/all_logs.txt
-root ST /var/dns/rootservers.db
+root ST /home/me/CC22-23/BD/rootservers.db
 

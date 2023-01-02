@@ -23,10 +23,9 @@ class TCPListenSP(Thread):
             while True:
                 connection, address = sp_server.accept()
                 print("recebi uma ligaçao no TCP")
-                worker = ServerWorker(connection, address, self.servidor, "TCP")
+                worker = ServerWorker(connection, address, self.servidor, "TCP", "")
                 worker.daemon = True
                 worker.start()
-                worker.join()
         # funcao para tratar de ligaçoes TCP
         except KeyboardInterrupt:
-            print("yes")
+            print("[SERVER] FIM DO SERVIDOR")

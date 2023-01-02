@@ -1,0 +1,5 @@
+# Configuration file for Servidor de Topo 1(SP) (10.2.2.2)
+root. DB /home/me/CC22-23/BD/ST.db
+root. SS 10.3.3.1:2000
+root. LG /home/me/CC22-23/Logs/stSP_logs.txt
+all LG /home/me/CC22-23/Logs/all_log.txt

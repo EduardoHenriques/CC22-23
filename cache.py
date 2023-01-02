@@ -173,4 +173,3 @@ if __name__ == '__main__':
 
     cache1.inserirCache(linha_teste4)
     cache1.showCache()
-    print("gay")

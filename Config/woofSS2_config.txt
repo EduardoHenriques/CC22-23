@@ -1,0 +1,6 @@
+# Configuration file for Servidor de Dominio de Topo 2(SS-2) (10.4.4.1)
+woof. DD 10.2.2.1
+woof. SP 10.2.2.1:2000
+woof. LG /home/me/CC22-23/Logs/caoSS2_logs.txt
+all LG /home/me/CC22-23/Logs/all_logs.txt
+root ST /home/me/CC22-23/BD/rootservers.db

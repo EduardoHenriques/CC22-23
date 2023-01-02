@@ -1,4 +1,3 @@
-import bin
 
 
 # DATA Fields de uma query

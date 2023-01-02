@@ -1,13 +1,13 @@
 # Configuration file for Servidor de SubDominio 2(SP) (10.1.1.2)
 # woof = 10.2.2.1
 # cao = 10.1.1.2
-cao.woof. DB /home/me/CC22-23/BD/bd_SP.txt
+cao.woof. DB /home/me/CC22-23/BD/cao.db
 cao.woof. DD 10.2.2.1    
 cao.woof. DD 10.1.1.2    
-cao.woof. SS 10.3.3.3
-cao.woof. SS 10.2.2.3
-cao.woof. LG /home/me/CC22-23/Logs/logs_SP.txt
+cao.woof. SS 10.3.3.3:2000
+cao.woof. SS 10.2.2.3:2000
+cao.woof. LG /home/me/CC22-23/Logs/caoSP_logs.txt
 all LG /home/me/CC22-23/Logs/all_logs.txt
-root ST /var/dns/rootservers.db
+root ST /home/me/CC22-23/BD/rootservers.db
 
 

@@ -1,12 +1,12 @@
 # Configuration file for Servidor de Dominio de Topo 2(SP) (10.4.4.2)
 # meow = 10.3.3.2
 # gato = 10.4.4.2
-gato.meow. DB /var/dns/woof_database.db
+gato.meow. DB /home/me/CC22-23/BD/gato.db
 gato.meow. DD 10.3.3.2
 gato.meow. DD 10.4.4.2
-gato.meow. SS 10.2.2.4
-gato.meow. SS 10.1.1.4
-gato.meow. LG /var/log/gatoSP_log.txt
+gato.meow. SS 10.2.2.4:2000
+gato.meow. SS 10.1.1.4:2000
+gato.meow. LG /home/me/CC22-23/Logs/gatoSP_logs.txt
 all LG /home/me/CC22-23/Logs/all_logs.txt
-root ST /var/dns/rootservers.db
+root ST /home/me/CC22-23/BD/rootservers.db
 

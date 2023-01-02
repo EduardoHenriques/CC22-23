@@ -17,13 +17,16 @@ BUFFER_SIZE = 1024
 def main():
     args = sys.argv[1:]
     configPath = args[0]
+    parsed = configPath.split('/')
+    config = parsed[1].split('.')[0]
+    nome = config.split('_')[0]
     IP2 = args[1]
     PORTA = args[2]
     PORTA_UDP = args[3]
     servidor = infoServer(configPath)
     IP = servidor.getSPIP()
     try:
-        ThreadUDP = UDPlisten(PORTA_UDP, IP2, servidor)
+        ThreadUDP = UDPlisten(PORTA_UDP, IP2, servidor, nome)
         ThreadTCP = TCPListenSS(PORTA, IP2, IP, servidor, BD)
         bootLog(servidor, PORTA, 2000)  # dá inicio a este sessão no ficheiro de logs
         print("Starting Server...")

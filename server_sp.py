@@ -16,12 +16,15 @@ from UDPListen import UDPlisten
 def main():
     args = sys.argv[1:]
     configPath = args[0]
+    parsed = configPath.split('/')
+    config = parsed[1].split('.')[0]
+    nome = config.split('_')[0]
     IP = args[1]
     PORTA = args[2]
     PORTA_UDP = args[3]
     servidor = infoServer(configPath)
     try:
-        ThreadUDP = UDPlisten(PORTA_UDP, IP, servidor)
+        ThreadUDP = UDPlisten(PORTA_UDP, IP, servidor, nome)
         ThreadTCP = TCPListenSP(PORTA, IP, servidor)
         print("Starting Server...")
         bootLog(servidor, PORTA, 2000)  # dá inicio a este sessão no ficheiro de logs

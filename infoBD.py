@@ -47,8 +47,6 @@ class BD:
             file.close()
 
     def query_to_cache(self, query, tipo_servidor):
-        print("query to cache")
-        print(query)
         if tipo_servidor == "resolver":
             origin = "OTHERS"
         elif tipo_servidor == "ss":

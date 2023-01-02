@@ -1,4 +1,3 @@
-import bin
 import headerField
 from headerField import header
 from dataField import data

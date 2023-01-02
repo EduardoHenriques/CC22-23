@@ -1,5 +1,0 @@
-# Configuration file for Servidor de Topo 2(SS) (10.3.3.1)
-root. SP 10.2.2.2
-root. LG /home/me/CC22-23/Logs/all_logs.txt
-all LG /var/log/all_log.txt
-

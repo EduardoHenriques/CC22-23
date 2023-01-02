@@ -1,0 +1,9 @@
+# Configuration file for Servidor de Dominio de Topo 1(SP) (10.3.3.2)
+meow. DB /home/me/CC22-23/BD/meow.db
+meow. DD 10.3.3.2
+meow. SS 10.1.1.1:2000
+meow. SS 10.4.4.3:2000
+meow. LG /home/me/CC22-23/Logs/meowSP_logs.txt
+all LG /home/me/CC22-23/Logs/all_logs.txt
+root ST /home/me/CC22-23/BD/rootservers.db
+

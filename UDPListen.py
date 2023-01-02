@@ -6,11 +6,12 @@ from ServerWorker import ServerWorker
 
 class UDPlisten(Thread):
 
-    def __init__(self, porta, ip, servidor):
+    def __init__(self, porta, ip, servidor, nomeServer):
         self.porta = int(porta)
         self.ip = ip
         self.type = "UDP"
         self.servidor = servidor
+        self.nomeServer = nomeServer
 
         Thread.__init__(self)
 
@@ -22,8 +23,8 @@ class UDPlisten(Thread):
             while True:
                 msg, address_UDP = CTT.recv_msg_udp(sp_serverUDP)
                 print("recebi uma ligaçao no UDP")
-                workerUDP = ServerWorker((msg, sp_serverUDP), address_UDP, self.servidor, self.type)
+                workerUDP = ServerWorker((msg, sp_serverUDP), address_UDP, self.servidor, self.type, self.nomeServer)
                 workerUDP.daemon = True
                 workerUDP.start()
         except KeyboardInterrupt:
-            print("yes")
+            print("[SERVER] FIM DO SERVIDOR")

@@ -1,5 +1,4 @@
 import random
-import bin
 
 
 # Criar um header novo(para o cliente enviar uma mensagem DNS ao servidor).

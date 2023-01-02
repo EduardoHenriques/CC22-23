@@ -14,11 +14,12 @@ PORTA = 1222  # porta do server
 
 class ServerWorker(Thread):
 
-    def __init__(self, socket, address, servidor, type):
+    def __init__(self, socket, address, servidor, type, nomeServer):
         self.socket = socket
         self.address = address
         self.servidor = servidor
         self.type = type
+        self.nomeServer = nomeServer
 
         Thread.__init__(self)
 
@@ -52,7 +53,6 @@ class ServerWorker(Thread):
                                     dados = (linha,num)
                                     CTT.send_msg(Packet(PacketType.BD_RESPONSE_LINE, dados),self.socket)  # enviar uma linha da BD
                                     num += 1
-                                print(copia_bd)
                                 print("[SERVER WORKER] Fim transferencia de zona")
                                 writeLogLine(self.servidor, 'ZT', IP2,'')  # escrever no ficheiro de log que houve uma transferencia de zona
                 if(self.type == "UDP"):
@@ -61,12 +61,11 @@ class ServerWorker(Thread):
                     # Caso o cliente envie uma mensagem
                     print(f"[SERVER WORKER] Recebi uma ligação do cliente {self.address}")
                     writeLogLine(self.servidor, 'QR', PORTA.__str__(), msg.data.debugLog())  # escrever no ficheiro de log que recebeu uma querie
-                    value = query.answer(msg.data, copia_bd.linhas, self.servidor, sck)  # processar a query recebida
+                    value = query.answer(msg.data, copia_bd.linhas, self.servidor, sck, self.nomeServer)  # processar a query recebida
                     origem = self.tipo_servidor()
                     self.servidor.BD_e_Cache.query_to_cache(value,origem)
-                    self.servidor.BD_e_Cache.cache.showCache()
-                    CTT.send_msg_udp(Packet(PacketType.SERVER_RESPONSE, value), sck,self.address)  # enviar resposta a query para o cliente
-                    print(msg.data.debug())
+                    CTT.send_msg_udp(Packet(PacketType.SERVER_RESPONSE, value), sck,self.address)  # enviar resposta a query para o servidor que fez o pedido
+                    print('\n' + msg.data.debug())
                     writeLogLine(self.servidor, 'QE', PORTA.__str__(),msg.data.debugLog())  # escrever no ficheiro de log que houve uma resposta a uma querie
                     break
         # 10.3.3.1 2001 meow. MX

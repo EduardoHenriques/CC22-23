@@ -3,7 +3,7 @@
 # cao = 10.1.1.2
 cao.woof. DD 10.1.1.2
 cao.woof. DD 10.2.2.1
-cao.woof. SP 10.1.1.2
-cao.woof. LG //home/me/CC22-23/Logs/logs_SS.txt
+cao.woof. SP 10.1.1.2:2000
+cao.woof. LG /home/me/CC22-23/Logs/caoSS1_logs.txt
 all /home/me/CC22-23/Logs/all_logs.txt
-root ST /var/dns/rootservers.db
+root ST /home/me/CC22-23/BD/rootservers.db

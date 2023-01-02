@@ -1,0 +1,180 @@
+[2022:12:31|15:22:54]: ST 1222 2000 shy
+[2022:12:31|15:22:54]: EV config-file-read Config/st_SP.txt
+[2022:12:31|15:22:54]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|15:22:54]: ST 1223 2000 shy
+[2022:12:31|15:22:54]: EV config-file-read Config/st_SP.txt
+[2022:12:31|15:22:54]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|15:23:40]: ST 2001 2000 shy
+[2022:12:31|15:23:40]: EV config-file-read Config/st_SP.txt
+[2022:12:31|15:23:40]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|15:23:40]: ST 2000 2000 shy
+[2022:12:31|15:23:40]: EV config-file-read Config/st_SP.txt
+[2022:12:31|15:23:40]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|15:27:13]: QR 1222 60811,,1,0,0,0;meow.,MX;
+[2022:12:31|15:27:13]: QE 1222 60811,,1,0,3,3;meow.,MX;
+[2022:12:31|16:06:59]: SP 2001 session-end
+[2022:12:31|16:06:59]: SP 2000 session-end
+[2022:12:31|16:07:05]: ST 2001 2000 shy
+[2022:12:31|16:07:05]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:07:05]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:07:05]: ST 2000 2000 shy
+[2022:12:31|16:07:05]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:07:05]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:07:28]: QR 1222 10092,,1,0,0,0;meow.,MX;
+[2022:12:31|16:07:28]: QE 1222 10092,,1,0,3,3;meow.,MX;
+[2022:12:31|16:07:55]: SP 2001 session-end
+[2022:12:31|16:07:55]: SP 2000 session-end
+[2022:12:31|16:07:58]: ST 2001 2000 shy
+[2022:12:31|16:07:58]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:07:58]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:07:58]: ST 2000 2000 shy
+[2022:12:31|16:07:58]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:07:58]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:08:08]: QR 1222 4094,,1,0,0,0;meow.,MX;
+[2022:12:31|16:08:08]: QE 1222 4094,,1,0,3,3;meow.,MX;
+[2022:12:31|16:11:38]: SP 2001 session-end
+[2022:12:31|16:11:38]: SP 2000 session-end
+[2022:12:31|16:11:40]: ST 2001 2000 shy
+[2022:12:31|16:11:40]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:11:40]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:11:40]: ST 2000 2000 shy
+[2022:12:31|16:11:40]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:11:40]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:11:49]: QR 1222 56970,,1,0,0,0;meow.,MX;
+[2022:12:31|16:11:49]: QE 1222 56970,,1,0,3,3;meow.,MX;
+[2022:12:31|16:12:17]: SP 2001 session-end
+[2022:12:31|16:12:17]: SP 2000 session-end
+[2022:12:31|16:12:20]: ST 2001 2000 shy
+[2022:12:31|16:12:20]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:12:20]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:12:20]: ST 2000 2000 shy
+[2022:12:31|16:12:20]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:12:20]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:12:28]: QR 1222 36880,,1,0,0,0;meow.,MX;
+[2022:12:31|16:12:28]: QE 1222 36880,,1,0,3,3;meow.,MX;
+[2022:12:31|16:13:50]: SP 2001 session-end
+[2022:12:31|16:13:50]: SP 2000 session-end
+[2022:12:31|16:13:51]: ST 2001 2000 shy
+[2022:12:31|16:13:51]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:13:51]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:13:51]: ST 2000 2000 shy
+[2022:12:31|16:13:51]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:13:51]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:13:58]: QR 1222 50483,,1,0,0,0;meow.,MX;
+[2022:12:31|16:13:58]: QE 1222 50483,,1,0,3,3;meow.,MX;
+[2022:12:31|16:15:28]: SP 2001 session-end
+[2022:12:31|16:15:28]: SP 2000 session-end
+[2022:12:31|16:15:30]: ST 2001 2000 shy
+[2022:12:31|16:15:30]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:15:30]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:15:30]: ST 2000 2000 shy
+[2022:12:31|16:15:30]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:15:30]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:15:38]: QR 1222 1046,,1,0,0,0;meow.,MX;
+[2022:12:31|16:15:38]: QE 1222 1046,,1,0,3,3;meow.,MX;
+[2022:12:31|16:16:07]: SP 2001 session-end
+[2022:12:31|16:16:07]: SP 2000 session-end
+[2022:12:31|16:16:19]: ST 2001 2000 shy
+[2022:12:31|16:16:19]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:16:19]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:16:19]: ST 2000 2000 shy
+[2022:12:31|16:16:19]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:16:19]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:16:24]: QR 1222 60221,,1,0,0,0;meow.,MX;
+[2022:12:31|16:16:24]: QE 1222 60221,,1,0,3,3;meow.,MX;
+[2022:12:31|16:17:02]: SP 2001 session-end
+[2022:12:31|16:17:02]: SP 2000 session-end
+[2022:12:31|16:17:03]: ST 2001 2000 shy
+[2022:12:31|16:17:03]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:17:03]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:17:03]: ST 2000 2000 shy
+[2022:12:31|16:17:03]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:17:03]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:17:11]: QR 1222 10896,,1,0,0,0;meow.,MX;
+[2022:12:31|16:17:11]: QE 1222 10896,,1,0,3,3;meow.,MX;
+[2022:12:31|16:18:14]: SP 2001 session-end
+[2022:12:31|16:18:14]: SP 2000 session-end
+[2022:12:31|16:18:15]: ST 2001 2000 shy
+[2022:12:31|16:18:15]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:18:15]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:18:15]: ST 2000 2000 shy
+[2022:12:31|16:18:15]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:18:15]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:18:52]: SP 2001 session-end
+[2022:12:31|16:18:52]: SP 2000 session-end
+[2022:12:31|16:18:54]: ST 2001 2000 shy
+[2022:12:31|16:18:54]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:18:54]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:18:54]: ST 2000 2000 shy
+[2022:12:31|16:18:54]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:18:54]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:19:14]: QR 1222 9777,,1,0,0,0;meow.,MX;
+[2022:12:31|16:19:14]: QE 1222 9777,,1,0,3,3;meow.,MX;
+[2022:12:31|16:20:11]: SP 2001 session-end
+[2022:12:31|16:20:11]: SP 2000 session-end
+[2022:12:31|16:20:13]: ST 2001 2000 shy
+[2022:12:31|16:20:13]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:20:13]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:20:13]: ST 2000 2000 shy
+[2022:12:31|16:20:13]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:20:13]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:20:23]: QR 1222 56067,,1,0,0,0;meow.,MX;
+[2022:12:31|16:20:23]: QE 1222 56067,,1,0,3,3;meow.,MX;
+[2022:12:31|16:22:32]: QR 1222 33104,,1,0,0,0;meow.,MX;
+[2022:12:31|16:22:32]: QE 1222 33104,,1,0,6,3;meow.,MX;
+[2022:12:31|16:31:59]: SP 2001 session-end
+[2022:12:31|16:31:59]: SP 2000 session-end
+[2022:12:31|16:32:06]: ST 2001 2000 shy
+[2022:12:31|16:32:06]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:32:06]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:32:06]: ST 2000 2000 shy
+[2022:12:31|16:32:06]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:32:06]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:32:20]: QR 1222 20316,,1,0,0,0;meow.,MX;
+[2022:12:31|16:32:20]: QE 1222 20316,,1,0,3,3;meow.,MX;
+[2022:12:31|16:34:40]: QR 1222 25977,,1,0,0,0;meow.,MX;
+[2022:12:31|16:34:40]: QE 1222 25977,,1,0,6,3;meow.,MX;
+[2022:12:31|16:34:50]: SP 2001 session-end
+[2022:12:31|16:34:50]: SP 2000 session-end
+[2022:12:31|16:34:58]: ST 2001 2000 shy
+[2022:12:31|16:34:58]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:34:58]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:34:58]: ST 2000 2000 shy
+[2022:12:31|16:34:58]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:34:58]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:35:07]: QR 1222 64449,,1,0,0,0;meow.,MX;
+[2022:12:31|16:35:07]: QE 1222 64449,,1,0,3,3;meow.,MX;
+[2022:12:31|16:35:15]: SP 2001 session-end
+[2022:12:31|16:35:15]: SP 2000 session-end
+[2022:12:31|16:35:20]: ST 2001 2000 shy
+[2022:12:31|16:35:20]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:35:20]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:35:20]: ST 2000 2000 shy
+[2022:12:31|16:35:20]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:35:20]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:35:35]: QR 1222 56215,,1,0,0,0;meow.,MX;
+[2022:12:31|16:35:35]: QE 1222 56215,,1,0,3,3;meow.,MX;
+[2022:12:31|16:38:00]: SP 2001 session-end
+[2022:12:31|16:38:00]: SP 2000 session-end
+[2022:12:31|16:38:01]: ST 2001 2000 shy
+[2022:12:31|16:38:01]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:38:01]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:38:01]: ST 2000 2000 shy
+[2022:12:31|16:38:01]: EV config-file-read Config/st_SP.txt
+[2022:12:31|16:38:01]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2022:12:31|16:38:11]: QR 1222 45919,,1,0,0,0;meow.,MX;
+[2022:12:31|16:38:11]: QE 1222 45919,,1,0,3,3;meow.,MX;
+[2023:01:02|17:12:33]: ST 2001 2000 shy
+[2023:01:02|17:12:33]: EV config-file-read Config/st_SP.txt
+[2023:01:02|17:12:33]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2023:01:02|17:12:33]: ST 2000 2000 shy
+[2023:01:02|17:12:33]: EV config-file-read Config/st_SP.txt
+[2023:01:02|17:12:33]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2023:01:02|17:14:50]: QR 1222 2802,,1,0,0,0;meow.,MX;
+[2023:01:02|17:14:50]: QE 1222 2802,,1,0,3,3;meow.,MX;
+[2023:01:02|19:30:43]: ST 2001 2000 shy
+[2023:01:02|19:30:43]: EV config-file-read Config/stSP_config.txt
+[2023:01:02|19:30:43]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2023:01:02|19:30:43]: ST 2000 2000 shy
+[2023:01:02|19:30:43]: EV config-file-read Config/stSP_config.txt
+[2023:01:02|19:30:43]: EV database-file-read /home/me/CC22-23/BD/ST.db

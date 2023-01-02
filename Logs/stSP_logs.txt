@@ -1,0 +1,6 @@
+[2023:01:02|19:30:43]: ST 2001 2000 shy
+[2023:01:02|19:30:43]: EV config-file-read Config/stSP_config.txt
+[2023:01:02|19:30:43]: EV database-file-read /home/me/CC22-23/BD/ST.db
+[2023:01:02|19:30:43]: ST 2000 2000 shy
+[2023:01:02|19:30:43]: EV config-file-read Config/stSP_config.txt
+[2023:01:02|19:30:43]: EV database-file-read /home/me/CC22-23/BD/ST.db

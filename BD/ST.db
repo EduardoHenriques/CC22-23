@@ -1,0 +1,29 @@
+# DNS database file for domain meow.
+# It also includes a pointer to the primary server
+# of the gato.meow. subdomain
+@ DEFAULT st
+TTL DEFAULT 86400
+@ SOASP ST1-SP TTL
+@ SOAADMIN dns\.admin.com. TTL
+@ SOASERIAL 1 TTL
+@ SOAREFRESH 12500 TTL
+@ SOARETRY 3500 TTL
+@ SOAEXPIRE 14000 TTL
+woof. NS ns1.woof. TTL
+woof. NS ns2.woof. TTL
+woof. NS ns3.woof. TTL
+meow. NS ns4.meow. TTL
+meow. NS ns5.meow. TTL
+meow. NS ns6.meow. TTL
+ns1 A 10.2.2.1 TTL
+ns2 A 10.1.1.3 TTL
+ns3 A 10.4.4.1 TTL
+ns4 A 10.3.3.2:1223 TTL
+ns5 A 10.4.4.3 TTL
+ns6 A 10.1.1.1 TTL
+SDT2-Woof-SP CNAME ns1 TTL
+SDT2-Woof-SS1 CNAME ns2 TTL
+SDT2-Woof-SS2 CNAME ns3 TTL
+SDT1-Meow-SP CNAME ns4 TTL
+SDT1-Meow-SS1 CNAME ns5 TTL
+SDT1-Meow-SS2 CNAME ns6 TTL

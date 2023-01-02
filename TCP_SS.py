@@ -35,7 +35,6 @@ class TCPListenSS(Thread):
                     time.sleep(3)
             if t and counter == 3:
                 print(f"[SERVER SS] Ligacao falhou")
-            print(f"[SERVER] Estou à escuta no {self.ip}:{self.porta}")
         # funcao para tratar de ligaçoes TCP
         except KeyboardInterrupt:
-            print("yes")
+            print("[SERVER] FIM DO SERVIDOR")

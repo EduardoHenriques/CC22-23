@@ -36,7 +36,7 @@ def verifica_extras(valor_res, valor_aut, linha, flags, sck):
     return False
 
 
-def answer(DNS_query, bd, dadosCache, socket):
+def answer(DNS_query, bd, dadosCache, socket, serverName):
     nome = DNS_query.data.queryInfo[0]  # campo nome do header DNS
     tipo = DNS_query.data.queryInfo[1]  # campo tipo do header DNS
     flags = DNS_query.header.flags  # campo flags do header DNS
@@ -72,5 +72,10 @@ def answer(DNS_query, bd, dadosCache, socket):
         flags = 'R'
     else:
         flags = ''
+    for linha in valor_aut:
+        if serverName in linha and 'R' in flags:
+            flags = 'R+A'
+        elif serverName in linha and 'R' not in flags:
+            flags = 'A'
     DNS_query.header.flags = flags  # alterar o campo flags do objeto DNS_query
     return DNS_query

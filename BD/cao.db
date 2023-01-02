@@ -1,0 +1,27 @@
+# DNS database file for subdomain cao.
+# It also includes a pointer to the primary server
+# of the cao.woof. subdomain
+@ DEFAULT cao.woof.
+TTL DEFAULT 86400
+@ SOASP ns1.cao.woof. TTL
+@ SOAADMIN dns\.admin.cao.woof.com. TTL
+@ SOASERIAL 0117102022 TTL
+@ SOAREFRESH 14400 TTL
+@ SOARETRY 3600 TTL
+@ SOAEXPIRE 604800 TTL
+@ NS caoSP TTL
+@ NS caoSS1 TTL
+@ NS caoSS2 TTL
+# Cao.@ NS sp.cao.woof. TTL
+@ MX mx1.cao.woof. TTL 10
+@ MX mx2.cao.woof. TTL 20
+ns1 A 10.1.1.2:2001 TTL
+ns2 A 10.3.3.3:2001 TTL
+ns3 A 10.2.2.3:2001 TTL
+mx1 A 10.3.3.3 TTL
+mx2 A 10.2.2.3 TTL
+SubD-Cao-SP CNAME ns1 TTL
+SubD-Cao-SS1 CNAME ns2 TTL
+SubD-Cao-SS2  CNAME ns3 TTL
+mail1 CNAME mx1 TTL
+mail2 CNAME mx2 TTL

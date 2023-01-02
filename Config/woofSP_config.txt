@@ -1,0 +1,10 @@
+# Configuration file for Servidor de Dominio de Topo 2(SP) (10.2.2.1)
+woof. DB /home/me/CC22-23/BD/woof.db
+woof. DD 10.2.2.1
+woof. SS 10.1.1.3:2000
+woof. SS 10.4.4.1:2000
+woof. LG /home/me/CC22-23/Logs/woofSP_logs.txt
+all LG /home/me/CC22-23/Logs/all_logs.txt
+root ST /home/me/CC22-23/BD/rootservers.db
+
+
